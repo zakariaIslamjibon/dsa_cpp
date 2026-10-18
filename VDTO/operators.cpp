@@ -16,5 +16,6 @@ int main ()
     cout << sub << "\n" <<mod <<"\n";
 
     return 0;
+    
 
 }

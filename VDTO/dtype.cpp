@@ -14,5 +14,6 @@ int main ()
     cout <<bgiN << "\n" <<bolean << "\n";
     cout << bolean1 << endl;
     
+    return 0;
 
 }

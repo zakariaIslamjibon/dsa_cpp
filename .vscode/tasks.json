@@ -1,0 +1,25 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++ to output",
+            "type": "process",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/output/${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

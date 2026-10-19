@@ -3,14 +3,14 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build C++ to output",
+            "label": "Build C++ to out",
             "type": "process",
             "command": "g++",
             "args": [
                 "-std=c++17",
                 "${file}",
                 "-o",
-                "${workspaceFolder}/output/${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}/out/${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

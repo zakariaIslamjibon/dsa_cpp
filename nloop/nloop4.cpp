@@ -10,7 +10,7 @@ int main ()
         char ch = 'A';
         for (int j = 0; j<n; j++)
         {
-            cout << i << " ";
+            cout << ch << " ";
             ch +=1;
         }
         cout << endl;

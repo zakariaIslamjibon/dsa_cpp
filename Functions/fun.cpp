@@ -7,12 +7,13 @@ void userName()
     cout << "Enter Name :";
     cin >> name;
 
-    cout << "My name is : " <<name;
+    cout << "My name is : " <<name << endl;
 
     
 }
 int main ()
 {
+    userName();
     userName();
     return 0;
 }

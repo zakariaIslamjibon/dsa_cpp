@@ -1,0 +1,11 @@
+
+{
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.cpp$",
+                "cmd": "\"C:\\MinGW\\bin\\g++.EXE\" \"${file}\" -std=c++17 -o \"${workspaceFolder}\\out\\${fileBasenameNoExtension}.exe\""
+            }
+        ]
+    }
+}

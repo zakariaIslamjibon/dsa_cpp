@@ -7,6 +7,7 @@ int main ()
 {
 
     vector<int> ver = {3,20,10,};
+    ver.pop_back();
     cout << ver[1] << endl;
     cout << "size ver :" << ver.size() <<endl;
 

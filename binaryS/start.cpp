@@ -36,7 +36,7 @@ int main()
     int target = 57;
 
     cout << findTar(arra, target) << endl;
-    cout << arra[target];
+    
 
     return 0;
 }

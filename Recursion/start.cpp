@@ -14,6 +14,7 @@ void recursion(int num)
 }
 int main ()
 {
-    recursion(4);
+    int num =100;
+    recursion(10);
     return 0;
 }

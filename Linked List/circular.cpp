@@ -63,8 +63,9 @@ class Circular {
 }
 
 
-void pop()
-{
+    void pop()
+    {
+        
     Node* temp = head;
 
     if (head == NULL)

@@ -2,21 +2,19 @@
 #include <iostream>
 using namespace std;
 
-class Node
-{
+class Node {
     public:
     int data;
     Node* next;
 
-    Node (int value)
+    Node(int value)
     {
         data = value;
         next = NULL;
     }
 };
 
-class Queue 
-{
+class Queue {
     Node* head;
     Node* tail;
 
@@ -29,56 +27,65 @@ class Queue
 
     void push(int value)
     {
-        Node* newNode = new Node(value);
+        Node* newdata = new Node(value);
 
-        if (empty())
+        if (head == NULL)
         {
-            head = tail = newNode;
+            head = tail = newdata;
         }
         else
-        { 
-            tail->next = newNode;
-            tail = newNode;
+        {
+            tail->next = newdata;
+            tail = newdata;
         }
     }
 
     void pop()
     {
-        if (empty())
+        if (head == NULL)
         {
-            cout << "Queue is Empty" << endl;
             return;
         }
-        else
-        {
-            Node* temp = head;
-            head = temp->next;
-            delete temp;
 
-            if (head == NULL)
-            {
-                tail = NULL;
-            }
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+
+        if (head == NULL)
+        {
+            tail = NULL;
         }
     }
 
     int front()
     {
-        if (empty())
+        if (head == NULL)
         {
-            cout << "Queue is Empty" << endl;
+            cout << "Queue is empty"<< endl;
             return -1;
         }
-        else 
-        {
-            return head->data;
-        }
+
+        return head->data;
     }
 
     bool empty()
     {
         return head == NULL;
     }
+
+    void display()
+    {
+        Node* temp = head;
+
+        while (temp != NULL)
+        {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }
+
+        cout << endl;
+    }
+
 };
 
 int main()
@@ -89,11 +96,13 @@ int main()
     q.push(20);
     q.push(30);
 
-    cout << q.front() << endl;
+    q.display();
+
+    cout << "Front: " << q.front() << endl;
 
     q.pop();
 
-    cout << q.front() << endl;
+    q.display();
 
     return 0;
 }
